@@ -10,7 +10,7 @@ body{margin:0;line-height:var(--line-height-body);font-family:var(--font-family-
 .top-spacer{width:var(--size-back-width)}
 .logo{display:inline-flex;align-items:center;gap:var(--space-4);font-size:var(--font-size-22);font-weight:var(--font-weight-extrabold);color:var(--color-text-brand);letter-spacing:var(--letter-spacing-logo)}
 .logo svg{width:var(--size-logo-icon);height:var(--size-logo-icon);flex:none}
-.back{border:0;background:none;font-family:inherit;font-size:var(--font-size-14);color:var(--color-text-secondary);cursor:pointer;padding:0;width:var(--size-back-width);text-align:left}
+.back{border:0;background:none;font-family:inherit;font-size:var(--font-size-14);color:var(--color-text-secondary);cursor:pointer;padding:0;width:var(--size-back-width);text-align:left;white-space:nowrap}
 .back[hidden]{visibility:hidden;display:block}
 .steps{display:flex;gap:var(--space-6);margin:var(--space-14) 0 0;list-style:none;padding:0}
 .steps li{flex:1;font-size:var(--font-size-12);color:var(--color-text-secondary)}
@@ -124,3 +124,5 @@ input:focus{border-color:var(--color-border-brand);box-shadow:var(--focus-ring)}
 .sns-item{display:flex;flex-direction:column;align-items:center;gap:var(--space-6);width:var(--size-social);padding:0;border:0;background:none;font-family:inherit;font-size:var(--font-size-12);color:var(--color-text-secondary);cursor:pointer}
 .sns-icon{width:var(--size-social);height:var(--size-social);border-radius:var(--radius-full);display:grid;place-items:center}
 .sns-icon.google{border:var(--size-hairline) solid var(--color-border-default)}
+/* 닉네임 안내 문구가 보일 때는 가입하기 버튼과 간격을 조금 더 둬요 */
+#form .field[data-name=nick].valid,#form .field[data-name=nick].invalid{margin-bottom:var(--space-8)}
