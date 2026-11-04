@@ -2,7 +2,7 @@
    타이포그래피 토큰 — 글꼴 · 크기 · 굵기 · 줄 간격 · 자간
    ========================================================== */
 :root{
-  --font-family-base:-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  --font-family-base:"Noto Sans KR","Apple SD Gothic Neo",-apple-system,sans-serif;
 
   --font-size-12:12px;
   --font-size-13:13px;
