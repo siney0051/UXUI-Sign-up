@@ -50,6 +50,8 @@
     const el = f(name), msg = el.querySelector('.msg'), empty = val(name) === '';
     if (!force && (!touched[name] || empty)) { el.classList.remove('invalid', 'valid'); msg.textContent = hint[name] || ''; return true; }
     const err = empty ? '필수 입력 항목이에요.' : rules[name](force);
+    // 비밀번호 확인: 입력하는 동안은 일치할 때만 알려 주고, 다를 때의 오류는 제출할 때만 보여요
+    if (name === 'pw2' && err && !force) { el.classList.remove('invalid', 'valid'); msg.textContent = ''; return true; }
     // 이메일: 인증 전이거나 돌아온 고객 확인을 기다리는 중이면 색을 바꾸지 않아요
     if (name === 'email' && !err && (!emailOk || returnPending)) { el.classList.remove('invalid', 'valid'); msg.textContent = ''; return true; }
     el.classList.toggle('invalid', !!err);
